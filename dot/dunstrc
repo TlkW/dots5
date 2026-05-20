@@ -1,0 +1,95 @@
+[global]
+monitor = 0
+follow = mouse
+# width = 450
+# height = 200
+width = 280
+height = 220
+origin = bottom-right
+offset = (15,15)
+scale = 0
+notification_limit = 2
+
+### CONFIGURAÇÃO DA BARRA DE PROGRESSO (AGORA CINZA) ###
+progress_bar = true
+progress_bar_frame_width = 2
+highlight = "#888888"          # Cor do preenchimento da barra (Cinza médio/claro)
+progress_bar_background = "#1a1a1a" # Fundo interno da barra (Cinza bem escuro)
+
+indicate_hidden = yes
+transparency = 0
+separator_height = 2
+padding = 12
+horizontal_padding = 10
+text_icon_padding = 15
+
+### BORDAS DO DUNST (AGORA CINZA) ###
+frame_width = 2
+frame_color = "#3a3a3a"        # Cor da borda externa
+gap_size = 0
+separator_color = frame
+sort = yes
+idle_threshold = 120
+line_height = 3
+markup = full
+# format = "<b>%a</b>\n%s%b"
+format = "<b>%s</b>\n%b"
+alignment = left
+vertical_alignment = top
+show_age_threshold = 60
+ellipsize = middle
+ignore_newline = no
+stack_duplicates = true
+hide_duplicate_count = false
+show_indicators = no
+icon_position = left
+min_icon_size = 65
+max_icon_size = 80
+icon_path = /home/sasha/Downloads/
+sticky_history = yes
+history_length = 20
+always_run_script = true
+corner_radius = 10
+ignore_dbusclose = false
+force_xinerama = false
+mouse_left_click = close_current
+mouse_middle_click = do_action, close_current
+mouse_right_click = close_all
+font = "JetBrainsMono Nerd 11"
+
+[urgency_low]
+    background = "#222222"
+    foreground = "#A0A0A0"
+    frame_color = "#3A3A3A"
+  timeout = 2
+
+[urgency_normal]
+    background = "#2B2B2B"
+    foreground = "#E5E5E5"
+    frame_color = "#444444"
+timeout = 2
+
+[urgency_critical]
+    background = "#333333"
+    foreground = "#FF6B6B"
+    frame_color = "#FF6B6B"
+
+timeout = 0
+default_icon = 
+
+
+[volume_rule]
+    
+# Filtra notificações que tenham "volume" no título ou no nome do app
+    summary = "*Volume*"
+    # Ou use appname se o seu script definir um:
+    # appname = "changevolume"
+    
+    # Define a sua imagem para essa regra
+    default_icon = /home/sasha/Downloads/h.jpg
+  
+    
+    # Garante que dure 1 segundo e tenha as cores Nord
+    timeout = 2
+    highlight = "#88c0d0"
+
